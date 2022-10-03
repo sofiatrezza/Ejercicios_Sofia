@@ -2,12 +2,11 @@
 # pantalla si es un número primo o no.
 
 n = int(input('Ingrese un número entero: '))
-cont = 0
+is_prime = True
 for i in range(n-1, 1, -1):
-    if n % 2 == 0:
-        print(f"El número {n} no es primo")
-    else:
-        print(f"El numero {n} es primo")
-        
-
-
+    if n % i == 0:
+        is_prime = False
+if is_prime:
+    print(f"El número {n} es primo")
+else:
+    print(f"El numero {n} no es primo")
